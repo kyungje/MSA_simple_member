@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="com.sk.msa.springboot.repository.mapper.IMemberMapper">
+	<select id="findAllMemberInfoByMemberID" resultType="com.sk.msa.springboot.repository.rvo.MemberVO">
+		SELECT member_id           as memberId
+		     , member_name         as memberName
+		     , home_address        as homeAddress
+		     , phone_number_mobile    as phoneNumberMobile
+		  FROM member_t
+		 WHERE member_id = #{memberId}
+	</select>
+</mapper>
