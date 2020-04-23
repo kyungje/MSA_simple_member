@@ -1,6 +1,6 @@
 server:
   port: ${msa-server.simple-member.port}
-#Eureka Standalone Server
+#Eureka StandaloneServer
 eureka: 
   client:
     service-url:
