@@ -30,6 +30,7 @@ public class MemberSearchController {
 		return new ResponseEntity<MemberVO>(accountVO, HttpStatus.OK);
 	}
 
+
 	@HystrixCommand
 	@RequestMapping(value = "/member/{memberId}", method = RequestMethod.POST)
 	public ResponseEntity<MemberDTO> getAllMemberInfo(@PathVariable("memberId") int memberId) {
